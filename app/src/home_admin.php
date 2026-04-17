@@ -40,31 +40,35 @@ echo "record trovati: " . count($cards) . "<hr>";
 
 <body>
 
-<div class="container">
-    <h1>cards</h1>
+<div class="container mt-4">
 
-    <!-- 🔍 SEARCH + RESET -->
-    <div style="display:flex; gap:5px; margin-bottom:15px;">
+    <!-- Titolo + ricerca -->
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+        <h1>Cards</h1>
+      
+
         <form method="GET" style="display:flex; gap:5px;">
-            <input 
+                 <a href="login.php" class="btn btn-dark">
+            Vai al login
+             </a>
+      
+        <input 
                 type="text" 
                 name="nome" 
                 placeholder="Cerca carta..."
                 value="<?= htmlspecialchars($nome) ?>"
+                style="padding:6px 10px; border:1px solid #ccc; border-radius:6px;"
             >
 
+          
             <button type="submit" class="btn btn-primary btn-sm">
                 Cerca
             </button>
 
-            <a href="home_admin.php" class="btn btn-secondary btn-sm">
+            <a href="?" class="btn btn-secondary btn-sm">
                 Reset
             </a>
         </form>
-    </div>
-
-    <div class="mb-3">
-        <a href="cards_new.php" class="btn btn-primary">Nuova card</a>
     </div>
 
     <div class="row row-cols-1 row-cols-md-3 g-4"> 

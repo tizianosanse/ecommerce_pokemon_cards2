@@ -42,18 +42,24 @@ echo "record trovati: " . count($cards) . "<hr>";
     <!-- Titolo + ricerca -->
     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
         <h1>Cards</h1>
+      
 
         <form method="GET" style="display:flex; gap:5px;">
-            <input 
+                 <a href="login.php" class="btn btn-dark">
+            Vai al login
+        </a>
+          <a href="carrello.php" class="btn btn-success">
+            Vai al carrello
+        </a>
+        <input 
                 type="text" 
                 name="nome" 
                 placeholder="Cerca carta..."
                 value="<?= htmlspecialchars($nome) ?>"
                 style="padding:6px 10px; border:1px solid #ccc; border-radius:6px;"
             >
-            <a href="carrello.php" class="btn btn-success">
-            Vai al carrello
-        </a>
+
+          
             <button type="submit" class="btn btn-primary btn-sm">
                 Cerca
             </button>
