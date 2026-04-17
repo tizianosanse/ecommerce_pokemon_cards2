@@ -52,7 +52,7 @@ echo "record trovati: " . count($cards) . "<hr>";
 
             <div class="card-body">
                 
-                <h5 class="card-title"><?= htmlspecialchars($c['card_nome'])?></h5>
+                <a href="dettaglio_cards.php?id=<?=$c['id']?>"><h5 class="card-title"><?= htmlspecialchars($c['card_nome'])?></h5></a>
                 <p class="card-text"><?= htmlspecialchars($c['descrizione'])?></p>
                 <p class="card-text"><?= htmlspecialchars($c['price'])?> € </p>
                 <a href="#" class="btn btn-primary">aggiungi al carrello</a>
