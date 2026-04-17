@@ -51,7 +51,9 @@ echo "record trovati: " . count($cards) . "<hr>";
                 value="<?= htmlspecialchars($nome) ?>"
                 style="padding:6px 10px; border:1px solid #ccc; border-radius:6px;"
             >
-
+            <a href="carrello.php" class="btn btn-success">
+            Vai al carrello
+        </a>
             <button type="submit" class="btn btn-primary btn-sm">
                 Cerca
             </button>
@@ -78,7 +80,7 @@ echo "record trovati: " . count($cards) . "<hr>";
 
             <div class="card-body d-flex flex-column">
 
-                <a href="dettaglio_cards.php?id=<?=$cards['id']?>"><h5 class="card-title"><?= htmlspecialchars($c['card_nome'])?></h5></a>
+                <a class="text-decoration-none text-dark" href="dettaglio_cards.php?id=<?=$c['id']?>"><h5 class="card-title"><?= htmlspecialchars($c['card_nome'])?></h5></a>
 
                 <p class="card-text text-muted small">
                     <?= htmlspecialchars($c['descrizione']) ?>
@@ -88,7 +90,7 @@ echo "record trovati: " . count($cards) . "<hr>";
                     Prezzo: <?= number_format($c['price'],2,',','.') ?> €
                 </p>
 
-                <a href="#" class="btn btn-primary w-100">
+                <a href="add_to_cart.php?id=<?= $c['id'] ?>" class="btn btn-primary w-100">
                     aggiungi al carrello
                 </a>
 
